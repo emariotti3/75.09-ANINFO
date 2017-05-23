@@ -1,0 +1,10 @@
+#Compiled class files:
+*.class
+#Package files:
+*.jar
+*.war
+*.zip
+*.tar.gz
+*.rar
+#Log files:
+*.log
