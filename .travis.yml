@@ -1,5 +1,5 @@
 language: java
 install: 
-	-sudo apt-get update
-	-sudo apt-get install maven
+-sudo apt-get update
+-sudo apt-get install maven
 script: mvn clean install
