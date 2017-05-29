@@ -32,8 +32,8 @@ public class Tarea {
         return encargados;
     }
 
-    public void finalizar(){
-        if (activo){
+    public void finalizar(UsuarioDesarrollador usuario){
+        if (activo && encargados.contains(usuario)){
             finalizado = true;
         }
     }

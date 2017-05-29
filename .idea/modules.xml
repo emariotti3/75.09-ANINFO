@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/sistema-psa.iml" filepath="$PROJECT_DIR$/sistema-psa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/business/sistema-psa-business.iml" filepath="$PROJECT_DIR$/business/sistema-psa-business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/infrastructure/sistema-psa-infrastructure.iml" filepath="$PROJECT_DIR$/infrastructure/sistema-psa-infrastructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/view/sistema-psa-view.iml" filepath="$PROJECT_DIR$/view/sistema-psa-view.iml" />
+    </modules>
+  </component>
+</project>

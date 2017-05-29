@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sistema-psa-business" />
+        <module name="sistema-psa-infrastructure" />
+        <module name="sistema-psa-view" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sistema-psa" target="1.7" />
+      <module name="sistema-psa-business" target="1.7" />
+      <module name="sistema-psa-infrastructure" target="1.7" />
+      <module name="sistema-psa-view" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

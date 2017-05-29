@@ -10,7 +10,7 @@ public class Proyecto {
     private String nombreProyecto;
     private String clienteAsociado;
     private UsuarioLider encargado;
-    private LocalDate fechaInicio, finalizacionEstimada;
+    private LocalDate fechaInicio, finalizacionEstimada, fechaFin;
     private boolean estaTerminado;
     private int prioridad;
     private boolean activo;
@@ -43,6 +43,7 @@ public class Proyecto {
 
     public void agregarEncargado(UsuarioLider usuario){
         this.encargado = usuario;
+        usuario.agregarProyecto(this);
     }
 
     public UsuarioLider obternerEncargado(){ return this.encargado; }
@@ -54,6 +55,7 @@ public class Proyecto {
     public void finalizar(){
         if (this.activo) {
             this.estaTerminado = true;
+            this.fechaFin = LocalDate.now();
         }
     }
 
