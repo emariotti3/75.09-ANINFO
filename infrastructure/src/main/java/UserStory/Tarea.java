@@ -1,51 +1,67 @@
 package UserStory;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Tarea {
 
-    private String nombre;
-    private List<UsuarioDesarrollador> encargados;
+    private String id;
+    private int iteracion;
+    private List<Usuario> desarrolladores;
     private String objetivo;
     private boolean activo;
     private boolean finalizado;
-    private List<String> proyectos;
+    private Set<String> proyectos;
 
-    public Tarea(String nombre, String objetivo){
-        this.nombre = nombre;
+    public Tarea(String id, String objetivo, int iteracion){
+        this.id = id;
         this.objetivo = objetivo;
+        this.iteracion = iteracion;
         this.activo = false;
         this.finalizado = false;
+        proyectos = new HashSet<String>();
     }
 
-    public String nombreTarea() {
-        return this.nombre;
+    public String idTarea() {
+        return this.id;
+    }
+
+    public int iteracionTarea(){
+        return iteracion;
     }
 
     public String obtenerObjetivo() { return this.objetivo; }
 
-    public void agregarEncargado(UsuarioDesarrollador usuario){
-        encargados.add(usuario);
+    public void agregarDesarrollador(Usuario usuario){
+        this.desarrolladores.add(usuario);
     }
 
-    public List<UsuarioDesarrollador> obtenerEncargados(){
-        return encargados;
+    public List<Usuario> obtenerDesarrolladores(){
+        return this.desarrolladores;
     }
 
-    public void finalizar(UsuarioDesarrollador usuario){
-        if (activo && encargados.contains(usuario)){
+    public void finalizar(Usuario usuario){
+
+        if (!this.desarrolladores.contains(usuario))
+            throw new UsuarioIncorrectoException();
+
+        if (activo)
             finalizado = true;
-        }
     }
 
     public void comenzar(){
         activo = true;
     }
 
-    public void agregarProyecto(String nombre){
-        proyectos.add(nombre);
+    public void agregarProyecto(String id){
+        proyectos.add(id);
     }
 
-    public List<String> obtenerProyectos() { return this.proyectos; }
+    public Set<String> obtenerProyectos() { return this.proyectos; }
+
+    public boolean estaTerminada(){
+        return this.finalizado;
+    }
 
 }

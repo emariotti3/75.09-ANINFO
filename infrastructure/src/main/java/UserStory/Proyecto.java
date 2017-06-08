@@ -1,7 +1,6 @@
 package UserStory;
 
-//import java.util.Date;
-import java.time.*;
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,44 +8,41 @@ public class Proyecto {
 
     private String nombreProyecto;
     private String clienteAsociado;
-    private UsuarioLider encargado;
+    private Usuario lider;
     private LocalDate fechaInicio, finalizacionEstimada, fechaFin;
     private boolean estaTerminado;
     private int prioridad;
     private boolean activo;
-    private Map<String,Tarea> tareas;
+    private Map<Integer,Integer> correspondenciaItFase;
+    private Map<Integer,Fase> fases;
+    private Integer cantIteraciones;
 
     public Proyecto(String nombre, String cliente,int prioridad, LocalDate fecha){
         this.nombreProyecto = nombre;
         this.clienteAsociado = cliente;
         this.prioridad = prioridad;
-        activo = false;
-        estaTerminado = false;
-        finalizacionEstimada = fecha;
-        tareas = new HashMap<String,Tarea>();
+        this.activo = false;
+        this.estaTerminado = false;
+        this.finalizacionEstimada = fecha;
+        this.correspondenciaItFase = new HashMap<Integer,Integer>();
+        this.fases = new HashMap<Integer,Fase>();
+        this.cantIteraciones = 0;
     }
 
     public String obtenerNombreProyecto(){ return this.nombreProyecto; }
 
-    public void agregarTarea(Tarea t){
-        String nombre = t.nombreTarea();
-        this.tareas.put(nombre,t);
-    }
-
-    public Tarea obtenerTarea(String nombre){
-        return this.tareas.get(nombre);
-    }
 
     public String obternerCliente(){
         return this.clienteAsociado;
     }
 
-    public void agregarEncargado(UsuarioLider usuario){
-        this.encargado = usuario;
+    public void agregarLider(Usuario usuario){
+        this.lider = usuario;
         usuario.agregarProyecto(this);
+        usuario.serLiderProyecto(this.nombreProyecto);
     }
 
-    public UsuarioLider obternerEncargado(){ return this.encargado; }
+    public Usuario obternerLider(){ return this.lider; }
 
     public boolean estaFinalizado(){
         return this.estaTerminado;
@@ -71,4 +67,125 @@ public class Proyecto {
     public int obtenerPrioridad(){
         return this.prioridad;
     }
+
+    public void agregarFase(){
+        Integer aux = fases.size();
+        Fase f = new Fase(aux);
+        this.fases.put(aux,f);
+    }
+
+    public void finalizarFase(Integer f){
+        if (!fases.containsKey(f))
+            throw new FaseInexistenteException();
+
+        try {
+            fases.get(f).finalizarFase();
+        } catch(FaseException ex){
+
+        }
+    }
+
+    public void agregarIteracion(Integer fase){
+        if (!fases.containsKey(fase))
+            throw new FaseInexistenteException();
+
+        Iteracion it = new Iteracion(this.cantIteraciones);
+        fases.get(fase).agregarIteracion(it);
+        correspondenciaItFase.put(cantIteraciones,fase);
+        this.cantIteraciones++;
+    }
+
+    public void finalizarIteracion(Integer it){
+
+        Integer numFase;
+        Fase fase;
+
+        if(!correspondenciaItFase.containsKey(it))
+            throw new IteracionInexistenteException();
+
+        numFase = correspondenciaItFase.get(it);
+        fase = fases.get(numFase);
+
+        try{
+            fase.finalizarIteracion(it);
+        } catch(IteracionNoFinalizableException ex){
+
+        }
+
+    }
+
+    public void agregarTarea(Tarea t, int it){
+
+        Integer numFase;
+        Fase fase;
+        Iteracion iteracion;
+
+        if (!correspondenciaItFase.containsKey(it))
+            throw new IteracionInexistenteException();
+
+        numFase = correspondenciaItFase.get(it);
+        fase = fases.get(numFase);
+        iteracion = fase.obtenerIteracion(it);
+
+        if (iteracion.estaFinalizado())
+            throw new IteracionFinalizadaException();
+
+        iteracion.agregarTarea(t);
+    }
+
+    public Tarea obtenerTarea(String id, int it){
+
+        Integer numFase;
+        Fase fase;
+        Iteracion iteracion;
+
+        if (!correspondenciaItFase.containsKey(it))
+            throw new IteracionInexistenteException();
+
+        numFase = correspondenciaItFase.get(it);
+        fase = fases.get(numFase);
+        iteracion = fase.obtenerIteracion(it);
+
+        return iteracion.obtenerTarea(id);
+    }
+
+
+    public Map<String,Tarea> obtenerTareasCompletadas (Usuario usuario, int it){
+
+        if (usuario.puestoActual() == "Gerente")
+            throw new UsuarioIncorrectoException();
+
+        Integer numFase;
+        Fase fase;
+        Iteracion iteracion;
+
+        if (!correspondenciaItFase.containsKey(it))
+            throw new IteracionInexistenteException();
+
+        numFase = correspondenciaItFase.get(it);
+        fase = fases.get(numFase);
+        iteracion = fase.obtenerIteracion(it);
+
+        return iteracion.obtenerTareasFinalizadas();
+    }
+
+    public Map<String,Tarea> obtenerTareas(Usuario usuario, int it){
+
+        Integer numFase;
+        Fase fase;
+        Iteracion iteracion;
+
+        if (usuario.puestoActual() == "Gerente")
+            throw new UsuarioIncorrectoException();
+
+        if (!correspondenciaItFase.containsKey(it))
+            throw new IteracionInexistenteException();
+
+        numFase = correspondenciaItFase.get(it);
+        fase = fases.get(numFase);
+        iteracion = fase.obtenerIteracion(it);
+
+        return iteracion.obtenerTareas();
+    }
+
 }

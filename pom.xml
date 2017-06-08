@@ -7,8 +7,6 @@
     <name>cucumber</name>
 
     <modules>
-        <module>view</module>
-        <module>business</module>
         <module>infrastructure</module>
     </modules>
     
