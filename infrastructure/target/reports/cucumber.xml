@@ -1,24 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="0.135132">
-<testcase classname="Manejo de tareas" name="Agregado de tareas a una iteracion valida" time="0.133007">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="8" time="2.599595">
+<testcase classname="Manejo de iteraciones" name="Agregado de una iteracion" time="2.594558">
+<system-out><![CDATA[Dado que mi proyecto tiene "5" iteraciones y la numero "3" esta activa......passed
+Cuando agrego una iteracion.................................................passed
+Entonces mi proyecto tiene "6" iteraciones..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Manejo de iteraciones" name="Finalizacion de una iteracion valida" time="0.000405">
+<system-out><![CDATA[Dado que mi proyecto tiene "5" iteraciones y la numero "3" esta activa......passed
+Cuando finalizo la iteracion "3"............................................passed
+Entonces la iteracion "3" esta finalizada...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Manejo de iteraciones" name="Finalizacion de una iteracion valida con tarea incompleta" time="0.000533">
+<system-out><![CDATA[Dado que mi proyecto tiene "5" iteraciones y la numero "3" esta activa......passed
+Cuando finalizo la iteracion "3" sin finalizar todas las tareas.............passed
+Entonces la iteracion "3" esta activa.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Manejo de iteraciones" name="Finalizacion de una iteracion invalida" time="0.001019">
+<system-out><![CDATA[Dado que mi proyecto tiene "5" iteraciones y la numero "3" esta activa......passed
+Cuando finalizo la iteracion "4"............................................passed
+Entonces la iteracion "4" no esta activa....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Manejo de tareas" name="Agregado de tareas a una iteracion valida" time="0.000814">
 <system-out><![CDATA[Dado que mi proyecto tiene "2" iteraciones,la iteracion "1" es la activa y tiene "1" tarea.passed
 Cuando agrego una tarea a la iteracion "1"..................................passed
 Entonces la iteracion "1" ahora tiene "2" tareas............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manejo de tareas" name="Agregado de tareas a una iteracion invalida" time="0.000505">
+<testcase classname="Manejo de tareas" name="Agregado de tareas a una iteracion invalida" time="0.000625">
 <system-out><![CDATA[Dado que mi proyecto tiene "2" iteraciones,la iteracion "0" es la activa y tiene "1" tarea.passed
 Cuando agrego una tarea a la iteracion "0"..................................passed
 Entonces la iteracion "0" sigue teniendo "1" tareas.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manejo de tareas" name="Finalizacion de una tarea por usuario que trabaja en ella" time="0.001192">
+<testcase classname="Manejo de tareas" name="Finalizacion de una tarea por usuario que trabaja en ella" time="0.001195">
 <system-out><![CDATA[Dado que el que usuario "1" posee la tarea "xxxx"...........................passed
 Cuando el usuario "1" finaliza la tarea "xxxx"..............................passed
 Entonces la tarea "xxxx" esta finalizada....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manejo de tareas" name="Finalizacion de una tarea por usuario que no trabaja en ella" time="0.000428">
+<testcase classname="Manejo de tareas" name="Finalizacion de una tarea por usuario que no trabaja en ella" time="0.000446">
 <system-out><![CDATA[Dado que el que usuario "1" posee la tarea "xxxx"...........................passed
 Cuando el usuario "2" finaliza la tarea "xxxx"..............................passed
 Entonces la tarea "xxxx" no esta finalizada.................................passed

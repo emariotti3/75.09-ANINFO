@@ -41,15 +41,10 @@ public class Usuario {
     }
 
     public void crearTarea(Proyecto proyecto, int iteracion, String id, String objetivo){
-//        Tarea nuevatarea = new Tarea(id,objetivo,iteracion);
         try{
             proyecto.agregarTarea(iteracion, id, objetivo);
             proyecto.agregarUsuarioATarea(id,this);
-//            nuevatarea.agregarDesarrollador(this);
-//            proyecto.agregarTarea(nuevatarea,iteracion);
-//            this.tareas.put(id,nuevatarea);
         } catch(IteracionException ex){}
-
     }
 
     public void agregarProyecto(Proyecto proyecto){

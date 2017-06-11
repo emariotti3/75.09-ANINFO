@@ -53,6 +53,10 @@ public class Iteracion {
         return this.finalizado;
     }
 
+    public boolean estaActiva() {
+        return this.comenzado;
+    }
+
     public void finalizar(){
         boolean aux = true;
         if (this.comenzado){

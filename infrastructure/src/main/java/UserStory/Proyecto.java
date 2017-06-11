@@ -68,6 +68,14 @@ public class Proyecto {
         return this.prioridad;
     }
 
+    public int obtenerCantidadFases(){
+        return this.fases.size();
+    }
+
+    public int obtenerCantidadIteraciones(){
+        return this.correspondenciaItFase.size();
+    }
+
     public void agregarFase(){
         Integer aux = fases.size();
         Fase f = new Fase(aux);
@@ -139,7 +147,24 @@ public class Proyecto {
 
     }
 
-    public void agregarTarea(int it, String id, String obj){ //Tarea t, int it){
+    public Iteracion obtenerIteracion(Integer it){
+        Integer numFase;
+        Fase fase;
+
+        Iteracion iteracion;
+
+        if(!correspondenciaItFase.containsKey(it))
+            throw new IteracionInexistenteException();
+
+        numFase = correspondenciaItFase.get(it);
+        fase = fases.get(numFase);
+        iteracion = fase.obtenerIteracion(it);
+
+        return iteracion;
+    }
+
+
+    public void agregarTarea(int it, String id, String obj){
 
         Integer numFase;
         Fase fase;
