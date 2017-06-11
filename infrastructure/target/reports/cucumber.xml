@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="0.135132">
+<testcase classname="Manejo de tareas" name="Agregado de tareas a una iteracion valida" time="0.133007">
+<system-out><![CDATA[Dado que mi proyecto tiene "2" iteraciones,la iteracion "1" es la activa y tiene "1" tarea.passed
+Cuando agrego una tarea a la iteracion "1"..................................passed
+Entonces la iteracion "1" ahora tiene "2" tareas............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Manejo de tareas" name="Agregado de tareas a una iteracion invalida" time="0.000505">
+<system-out><![CDATA[Dado que mi proyecto tiene "2" iteraciones,la iteracion "0" es la activa y tiene "1" tarea.passed
+Cuando agrego una tarea a la iteracion "0"..................................passed
+Entonces la iteracion "0" sigue teniendo "1" tareas.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Manejo de tareas" name="Finalizacion de una tarea por usuario que trabaja en ella" time="0.001192">
+<system-out><![CDATA[Dado que el que usuario "1" posee la tarea "xxxx"...........................passed
+Cuando el usuario "1" finaliza la tarea "xxxx"..............................passed
+Entonces la tarea "xxxx" esta finalizada....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Manejo de tareas" name="Finalizacion de una tarea por usuario que no trabaja en ella" time="0.000428">
+<system-out><![CDATA[Dado que el que usuario "1" posee la tarea "xxxx"...........................passed
+Cuando el usuario "2" finaliza la tarea "xxxx"..............................passed
+Entonces la tarea "xxxx" no esta finalizada.................................passed
+]]></system-out>
+</testcase>
+</testsuite>

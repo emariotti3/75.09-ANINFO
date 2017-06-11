@@ -1,5 +1,6 @@
 package UserStory;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -20,6 +21,8 @@ public class Usuario {
         this.contrasenia = contrasenia;
         this.puesto = puesto;
         this.lider = false;
+        this.tareas = new HashMap<String,Tarea>();
+        this.proyectos = new HashMap<String,Proyecto>();
         this.liderProyecto = new HashSet<String>();
         this.liderProyecto.clear();
     }
@@ -38,17 +41,21 @@ public class Usuario {
     }
 
     public void crearTarea(Proyecto proyecto, int iteracion, String id, String objetivo){
-        Tarea nuevatarea = new Tarea(id,objetivo,iteracion);
-        //tareas.put(id,nuevatarea);
+//        Tarea nuevatarea = new Tarea(id,objetivo,iteracion);
         try{
-            proyecto.agregarTarea(nuevatarea,iteracion);
+            proyecto.agregarTarea(iteracion, id, objetivo);
+            proyecto.agregarUsuarioATarea(id,this);
+//            nuevatarea.agregarDesarrollador(this);
+//            proyecto.agregarTarea(nuevatarea,iteracion);
+//            this.tareas.put(id,nuevatarea);
         } catch(IteracionException ex){}
 
     }
 
     public void agregarProyecto(Proyecto proyecto){
         String aux = proyecto.obtenerNombreProyecto();
-        proyectos.put(aux,proyecto);
+        Proyecto proyectoAux = proyecto;
+        proyectos.put(aux,proyectoAux);
     }
 
     public Map<String,Tarea> obtenerTareas(){
@@ -76,10 +83,18 @@ public class Usuario {
         }
     }
 
+    public void activarTarea(String id){
+        if(!tareas.containsKey(id))
+            throw new TareaInexistenteException();
+
+        tareas.get(id).comenzar();
+    }
+
     public void finalizarTarea(String t){
-        try{
-            this.tareas.get(t).finalizar(this);
-        } catch (UsuarioIncorrectoException ex){
-        }
+
+        if(!tareas.containsKey(t))
+            throw new TareaInexistenteException();
+
+        this.tareas.get(t).finalizar(this);
     }
 }

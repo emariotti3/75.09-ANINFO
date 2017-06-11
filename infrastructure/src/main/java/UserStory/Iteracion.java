@@ -1,5 +1,6 @@
 package UserStory;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Iteracion {
@@ -13,6 +14,11 @@ public class Iteracion {
         this.comenzado = false;
         this.finalizado = false;
         this.iteracion = iteracion;
+        this.tareas = new HashMap<String,Tarea>();
+    }
+
+    public void activarIteracion(){
+        this.comenzado = true;
     }
 
     public int obtenerIteracion(){
@@ -55,10 +61,8 @@ public class Iteracion {
                     aux = false;
             }
 
-            if (aux){
+            if (aux)
                 this.finalizado = true;
-                this.comenzado = false;
-            }
         } else {
             throw new IteracionNoFinalizableException();
         }

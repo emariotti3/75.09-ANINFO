@@ -19,9 +19,29 @@ public class Fase {
 
     public int obtenerFase(){ return numeroFase;}
 
+    public void activarFase(){
+        if (!finalizado)
+            activo = true;
+        else
+            throw new FaseNoInicializableException();
+    }
+
     public void agregarIteracion(Iteracion it){
         Integer numIt = it.obtenerIteracion();
         iteraciones.put(numIt,it);
+    }
+
+    public void activarIteracion(Integer it){
+        if(!this.activo)
+            throw new IteracionNoInicializableException();
+
+        if(iteraciones.containsKey(it-1))
+            if(iteraciones.get(it-1).estaFinalizado())
+                iteraciones.get(it).activarIteracion();
+            else
+                throw new IteracionNoInicializableException();
+        else
+            iteraciones.get(it).activarIteracion();
     }
 
     public Iteracion obtenerIteracion(Integer numIt){
@@ -36,10 +56,6 @@ public class Fase {
         }
     }
 
-    public void iniciarFase(){
-        activo = true;
-    }
-
     public void finalizarFase(){
 
         boolean aux = true;
@@ -50,10 +66,8 @@ public class Fase {
                     aux = false;
             }
 
-            if (aux){
+            if (aux)
                 this.finalizado = true;
-                this.activo = false;
-            }
         }
 
         throw new FaseNoFinalizableException();

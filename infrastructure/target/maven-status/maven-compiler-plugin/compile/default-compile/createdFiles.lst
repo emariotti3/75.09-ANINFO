@@ -1,8 +1,10 @@
 UserStory/UsuarioIncorrectoException.class
 UserStory/Proyecto.class
+UserStory/TareaInexistenteException.class
 App.class
 UserStory/FaseException.class
 UserStory/IteracionInexistenteException.class
+UserStory/FaseNoInicializableException.class
 UserStory/Iteracion.class
 UserStory/IteracionFinalizadaException.class
 UserStory/FaseInexistenteException.class
@@ -10,5 +12,6 @@ UserStory/IteracionNoFinalizableException.class
 UserStory/Fase.class
 UserStory/Usuario.class
 UserStory/FaseNoFinalizableException.class
+UserStory/IteracionNoInicializableException.class
 UserStory/IteracionException.class
 UserStory/Tarea.class

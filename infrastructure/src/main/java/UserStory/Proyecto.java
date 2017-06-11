@@ -16,6 +16,7 @@ public class Proyecto {
     private Map<Integer,Integer> correspondenciaItFase;
     private Map<Integer,Fase> fases;
     private Integer cantIteraciones;
+    private Map<String,Integer> correspondenciaTareaIt;
 
     public Proyecto(String nombre, String cliente,int prioridad, LocalDate fecha){
         this.nombreProyecto = nombre;
@@ -26,6 +27,7 @@ public class Proyecto {
         this.finalizacionEstimada = fecha;
         this.correspondenciaItFase = new HashMap<Integer,Integer>();
         this.fases = new HashMap<Integer,Fase>();
+        this.correspondenciaTareaIt = new HashMap<String,Integer>();
         this.cantIteraciones = 0;
     }
 
@@ -38,8 +40,6 @@ public class Proyecto {
 
     public void agregarLider(Usuario usuario){
         this.lider = usuario;
-        usuario.agregarProyecto(this);
-        usuario.serLiderProyecto(this.nombreProyecto);
     }
 
     public Usuario obternerLider(){ return this.lider; }
@@ -74,6 +74,13 @@ public class Proyecto {
         this.fases.put(aux,f);
     }
 
+    public void activarFase(Integer f){
+        try{
+            fases.get(f).activarFase();
+        } catch(FaseException ex){}
+
+    }
+
     public void finalizarFase(Integer f){
         if (!fases.containsKey(f))
             throw new FaseInexistenteException();
@@ -95,6 +102,24 @@ public class Proyecto {
         this.cantIteraciones++;
     }
 
+    public void activarIteracion(Integer it){
+        Integer numFase;
+        Fase fase;
+
+        if(!correspondenciaItFase.containsKey(it))
+            throw new IteracionInexistenteException();
+
+        numFase = correspondenciaItFase.get(it);
+        fase = fases.get(numFase);
+
+        try{
+            fase.activarIteracion(it);
+        } catch(IteracionNoInicializableException ex){
+
+        }
+
+    }
+
     public void finalizarIteracion(Integer it){
 
         Integer numFase;
@@ -114,11 +139,12 @@ public class Proyecto {
 
     }
 
-    public void agregarTarea(Tarea t, int it){
+    public void agregarTarea(int it, String id, String obj){ //Tarea t, int it){
 
         Integer numFase;
         Fase fase;
         Iteracion iteracion;
+        Tarea t;
 
         if (!correspondenciaItFase.containsKey(it))
             throw new IteracionInexistenteException();
@@ -130,21 +156,46 @@ public class Proyecto {
         if (iteracion.estaFinalizado())
             throw new IteracionFinalizadaException();
 
+        t = new Tarea(id,obj,it);
+        correspondenciaTareaIt.put(id,it);
         iteracion.agregarTarea(t);
     }
 
-    public Tarea obtenerTarea(String id, int it){
-
+    public void agregarUsuarioATarea(String t, Usuario u){
+        Integer numIt;
         Integer numFase;
+
+        Fase fase;
+        Iteracion it;
+
+        if(!correspondenciaTareaIt.containsKey(t))
+            throw new TareaInexistenteException();
+
+        numIt = correspondenciaTareaIt.get(t);
+        numFase = correspondenciaItFase.get(numIt);
+
+        fase = fases.get(numFase);
+        it = fase.obtenerIteracion(numIt);
+
+        it.obtenerTarea(t).agregarDesarrollador(u);
+    }
+
+    public Tarea obtenerTarea(String id){
+
+        Integer numFase, numIt;
         Fase fase;
         Iteracion iteracion;
 
-        if (!correspondenciaItFase.containsKey(it))
-            throw new IteracionInexistenteException();
 
-        numFase = correspondenciaItFase.get(it);
+        if(!correspondenciaTareaIt.containsKey(id)){
+           throw new TareaInexistenteException();
+        }
+
+        numIt = correspondenciaTareaIt.get(id);
+
+        numFase = correspondenciaItFase.get(numIt);
         fase = fases.get(numFase);
-        iteracion = fase.obtenerIteracion(it);
+        iteracion = fase.obtenerIteracion(numIt);
 
         return iteracion.obtenerTarea(id);
     }
@@ -175,7 +226,7 @@ public class Proyecto {
         Fase fase;
         Iteracion iteracion;
 
-        if (usuario.puestoActual() == "Gerente")
+        if (usuario.puestoActual() != "Gerente")
             throw new UsuarioIncorrectoException();
 
         if (!correspondenciaItFase.containsKey(it))

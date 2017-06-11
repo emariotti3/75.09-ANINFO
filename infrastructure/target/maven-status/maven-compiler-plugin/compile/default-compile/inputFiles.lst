@@ -7,8 +7,11 @@
 /home/alan/Documents/Implementacion User Story/infrastructure/src/main/java/App.java
 /home/alan/Documents/Implementacion User Story/infrastructure/src/main/java/UserStory/Usuario.java
 /home/alan/Documents/Implementacion User Story/infrastructure/src/main/java/UserStory/UsuarioIncorrectoException.java
+/home/alan/Documents/Implementacion User Story/infrastructure/src/main/java/UserStory/FaseNoInicializableException.java
+/home/alan/Documents/Implementacion User Story/infrastructure/src/main/java/UserStory/IteracionNoInicializableException.java
 /home/alan/Documents/Implementacion User Story/infrastructure/src/main/java/UserStory/Tarea.java
 /home/alan/Documents/Implementacion User Story/infrastructure/src/main/java/UserStory/IteracionException.java
 /home/alan/Documents/Implementacion User Story/infrastructure/src/main/java/UserStory/FaseException.java
+/home/alan/Documents/Implementacion User Story/infrastructure/src/main/java/UserStory/TareaInexistenteException.java
 /home/alan/Documents/Implementacion User Story/infrastructure/src/main/java/UserStory/IteracionNoFinalizableException.java
 /home/alan/Documents/Implementacion User Story/infrastructure/src/main/java/UserStory/FaseInexistenteException.java

@@ -1,5 +1,6 @@
 package UserStory;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -20,6 +21,7 @@ public class Tarea {
         this.iteracion = iteracion;
         this.activo = false;
         this.finalizado = false;
+        this.desarrolladores = new ArrayList<Usuario>();
         proyectos = new HashSet<String>();
     }
 
@@ -35,6 +37,7 @@ public class Tarea {
 
     public void agregarDesarrollador(Usuario usuario){
         this.desarrolladores.add(usuario);
+        usuario.agregarTareas(this);
     }
 
     public List<Usuario> obtenerDesarrolladores(){
