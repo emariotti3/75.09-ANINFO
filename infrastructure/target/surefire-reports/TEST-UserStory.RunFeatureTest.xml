@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UserStory.RunFeatureTest" time="0.006" tests="32" errors="0" skipped="0" failures="0">
+<testsuite name="UserStory.RunFeatureTest" time="0.01" tests="40" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
@@ -62,23 +62,31 @@
   <testcase name="Dado que mi proyecto tiene &quot;5&quot; iteraciones y la numero &quot;3&quot; esta activa" classname="Escenario: Agregado de una iteracion" time="0"/>
   <testcase name="Cuando agrego una iteracion" classname="Escenario: Agregado de una iteracion" time="0"/>
   <testcase name="Entonces mi proyecto tiene &quot;6&quot; iteraciones" classname="Escenario: Agregado de una iteracion" time="0"/>
-  <testcase name="Escenario: Agregado de una iteracion" classname="Escenario: Agregado de una iteracion" time="0.001"/>
+  <testcase name="Escenario: Agregado de una iteracion" classname="Escenario: Agregado de una iteracion" time="0"/>
   <testcase name="Dado que mi proyecto tiene &quot;5&quot; iteraciones y la numero &quot;3&quot; esta activa" classname="Escenario: Finalizacion de una iteracion valida" time="0"/>
   <testcase name="Cuando finalizo la iteracion &quot;3&quot;" classname="Escenario: Finalizacion de una iteracion valida" time="0"/>
   <testcase name="Entonces la iteracion &quot;3&quot; esta finalizada" classname="Escenario: Finalizacion de una iteracion valida" time="0"/>
-  <testcase name="Escenario: Finalizacion de una iteracion valida" classname="Escenario: Finalizacion de una iteracion valida" time="0.001"/>
+  <testcase name="Escenario: Finalizacion de una iteracion valida" classname="Escenario: Finalizacion de una iteracion valida" time="0"/>
   <testcase name="Dado que mi proyecto tiene &quot;5&quot; iteraciones y la numero &quot;3&quot; esta activa" classname="Escenario: Finalizacion de una iteracion valida con tarea incompleta" time="0"/>
   <testcase name="Cuando finalizo la iteracion &quot;3&quot; sin finalizar todas las tareas" classname="Escenario: Finalizacion de una iteracion valida con tarea incompleta" time="0"/>
   <testcase name="Entonces la iteracion &quot;3&quot; esta activa" classname="Escenario: Finalizacion de una iteracion valida con tarea incompleta" time="0"/>
-  <testcase name="Escenario: Finalizacion de una iteracion valida con tarea incompleta" classname="Escenario: Finalizacion de una iteracion valida con tarea incompleta" time="0"/>
+  <testcase name="Escenario: Finalizacion de una iteracion valida con tarea incompleta" classname="Escenario: Finalizacion de una iteracion valida con tarea incompleta" time="0.002"/>
   <testcase name="Dado que mi proyecto tiene &quot;5&quot; iteraciones y la numero &quot;3&quot; esta activa" classname="Escenario: Finalizacion de una iteracion invalida" time="0"/>
   <testcase name="Cuando finalizo la iteracion &quot;4&quot;" classname="Escenario: Finalizacion de una iteracion invalida" time="0"/>
   <testcase name="Entonces la iteracion &quot;4&quot; no esta activa" classname="Escenario: Finalizacion de una iteracion invalida" time="0"/>
-  <testcase name="Escenario: Finalizacion de una iteracion invalida" classname="Escenario: Finalizacion de una iteracion invalida" time="0.001"/>
+  <testcase name="Escenario: Finalizacion de una iteracion invalida" classname="Escenario: Finalizacion de una iteracion invalida" time="0"/>
+  <testcase name="Dado que mi proyecto tiene una iteracion y se finalizo la tarea &quot;true&quot;" classname="Escenario: Finalizado de un proyecto valido" time="0"/>
+  <testcase name="Cuando finalizo el proyecto" classname="Escenario: Finalizado de un proyecto valido" time="0"/>
+  <testcase name="Entonces el proyecto esta finalizado" classname="Escenario: Finalizado de un proyecto valido" time="0"/>
+  <testcase name="Escenario: Finalizado de un proyecto valido" classname="Escenario: Finalizado de un proyecto valido" time="0"/>
+  <testcase name="Dado que mi proyecto tiene una iteracion y se finalizo la tarea &quot;false&quot;" classname="Escenario: Finalizado de un proyecto invalido" time="0"/>
+  <testcase name="Cuando finalizo el proyecto" classname="Escenario: Finalizado de un proyecto invalido" time="0"/>
+  <testcase name="Entonces el proyecto no esta finalizado" classname="Escenario: Finalizado de un proyecto invalido" time="0.003"/>
+  <testcase name="Escenario: Finalizado de un proyecto invalido" classname="Escenario: Finalizado de un proyecto invalido" time="0.003"/>
   <testcase name="Dado que mi proyecto tiene &quot;2&quot; iteraciones,la iteracion &quot;1&quot; es la activa y tiene &quot;1&quot; tarea" classname="Escenario: Agregado de tareas a una iteracion valida" time="0"/>
   <testcase name="Cuando agrego una tarea a la iteracion &quot;1&quot;" classname="Escenario: Agregado de tareas a una iteracion valida" time="0"/>
   <testcase name="Entonces la iteracion &quot;1&quot; ahora tiene &quot;2&quot; tareas" classname="Escenario: Agregado de tareas a una iteracion valida" time="0"/>
-  <testcase name="Escenario: Agregado de tareas a una iteracion valida" classname="Escenario: Agregado de tareas a una iteracion valida" time="0"/>
+  <testcase name="Escenario: Agregado de tareas a una iteracion valida" classname="Escenario: Agregado de tareas a una iteracion valida" time="0.001"/>
   <testcase name="Dado que mi proyecto tiene &quot;2&quot; iteraciones,la iteracion &quot;0&quot; es la activa y tiene &quot;1&quot; tarea" classname="Escenario: Agregado de tareas a una iteracion invalida" time="0"/>
   <testcase name="Cuando agrego una tarea a la iteracion &quot;0&quot;" classname="Escenario: Agregado de tareas a una iteracion invalida" time="0.001"/>
   <testcase name="Entonces la iteracion &quot;0&quot; sigue teniendo &quot;1&quot; tareas" classname="Escenario: Agregado de tareas a una iteracion invalida" time="0"/>
@@ -86,9 +94,9 @@
   <testcase name="Dado que el que usuario &quot;1&quot; posee la tarea &quot;xxxx&quot;" classname="Escenario: Finalizacion de una tarea por usuario que trabaja en ella" time="0"/>
   <testcase name="Cuando el usuario &quot;1&quot; finaliza la tarea &quot;xxxx&quot;" classname="Escenario: Finalizacion de una tarea por usuario que trabaja en ella" time="0"/>
   <testcase name="Entonces la tarea &quot;xxxx&quot; esta finalizada" classname="Escenario: Finalizacion de una tarea por usuario que trabaja en ella" time="0"/>
-  <testcase name="Escenario: Finalizacion de una tarea por usuario que trabaja en ella" classname="Escenario: Finalizacion de una tarea por usuario que trabaja en ella" time="0.001"/>
+  <testcase name="Escenario: Finalizacion de una tarea por usuario que trabaja en ella" classname="Escenario: Finalizacion de una tarea por usuario que trabaja en ella" time="0"/>
   <testcase name="Dado que el que usuario &quot;1&quot; posee la tarea &quot;xxxx&quot;" classname="Escenario: Finalizacion de una tarea por usuario que no trabaja en ella" time="0"/>
   <testcase name="Cuando el usuario &quot;2&quot; finaliza la tarea &quot;xxxx&quot;" classname="Escenario: Finalizacion de una tarea por usuario que no trabaja en ella" time="0"/>
   <testcase name="Entonces la tarea &quot;xxxx&quot; no esta finalizada" classname="Escenario: Finalizacion de una tarea por usuario que no trabaja en ella" time="0"/>
-  <testcase name="Escenario: Finalizacion de una tarea por usuario que no trabaja en ella" classname="Escenario: Finalizacion de una tarea por usuario que no trabaja en ella" time="0.001"/>
+  <testcase name="Escenario: Finalizacion de una tarea por usuario que no trabaja en ella" classname="Escenario: Finalizacion de una tarea por usuario que no trabaja en ella" time="0"/>
 </testsuite>

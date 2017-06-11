@@ -72,4 +72,8 @@ public class Fase {
 
         throw new FaseNoFinalizableException();
     }
+
+    public boolean estaFinalizado(){
+        return this.finalizado;
+    }
 }

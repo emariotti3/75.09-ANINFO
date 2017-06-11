@@ -49,10 +49,25 @@ public class Proyecto {
     }
 
     public void finalizar(){
+        boolean fasesTerminadas = true;
+
         if (this.activo) {
-            this.estaTerminado = true;
-            this.fechaFin = LocalDate.now();
+            for (Map.Entry<Integer,Fase> fase: fases.entrySet()){
+                if (!fase.getValue().estaFinalizado())
+                    fasesTerminadas = false;
+            }
+
+            if (fasesTerminadas){
+                this.estaTerminado = true;
+                this.fechaFin = LocalDate.now();
+            } else {
+                throw new ProyectoNoFinalizableException();
+            }
+        } else {
+            throw new ProyectoNoInicializadoException();
         }
+
+
     }
 
     public void comenzar(){

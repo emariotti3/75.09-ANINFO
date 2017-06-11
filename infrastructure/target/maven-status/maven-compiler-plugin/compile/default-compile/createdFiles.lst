@@ -3,11 +3,14 @@ UserStory/Proyecto.class
 UserStory/TareaInexistenteException.class
 App.class
 UserStory/FaseException.class
+UserStory/ProyectoNoInicializadoException.class
 UserStory/IteracionInexistenteException.class
+UserStory/ProyectoException.class
 UserStory/FaseNoInicializableException.class
 UserStory/Iteracion.class
 UserStory/IteracionFinalizadaException.class
 UserStory/FaseInexistenteException.class
+UserStory/ProyectoNoFinalizableException.class
 UserStory/IteracionNoFinalizableException.class
 UserStory/Fase.class
 UserStory/Usuario.class

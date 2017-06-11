@@ -18,7 +18,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2594438013,
+              "duration": 121944980,
               "status": "passed"
             },
             "line": 5,
@@ -40,7 +40,7 @@
           },
           {
             "result": {
-              "duration": 23081,
+              "duration": 22724,
               "status": "passed"
             },
             "line": 6,
@@ -52,7 +52,7 @@
           },
           {
             "result": {
-              "duration": 97030,
+              "duration": 88750,
               "status": "passed"
             },
             "line": 7,
@@ -80,7 +80,7 @@
         "steps": [
           {
             "result": {
-              "duration": 195375,
+              "duration": 196045,
               "status": "passed"
             },
             "line": 10,
@@ -102,7 +102,7 @@
           },
           {
             "result": {
-              "duration": 107441,
+              "duration": 77884,
               "status": "passed"
             },
             "line": 11,
@@ -120,7 +120,7 @@
           },
           {
             "result": {
-              "duration": 102659,
+              "duration": 94047,
               "status": "passed"
             },
             "line": 12,
@@ -148,7 +148,7 @@
         "steps": [
           {
             "result": {
-              "duration": 286255,
+              "duration": 185130,
               "status": "passed"
             },
             "line": 15,
@@ -170,7 +170,7 @@
           },
           {
             "result": {
-              "duration": 151928,
+              "duration": 76081,
               "status": "passed"
             },
             "line": 16,
@@ -188,7 +188,7 @@
           },
           {
             "result": {
-              "duration": 94454,
+              "duration": 76544,
               "status": "passed"
             },
             "line": 17,
@@ -216,7 +216,7 @@
         "steps": [
           {
             "result": {
-              "duration": 819652,
+              "duration": 298097,
               "status": "passed"
             },
             "line": 20,
@@ -238,7 +238,7 @@
           },
           {
             "result": {
-              "duration": 125427,
+              "duration": 146506,
               "status": "passed"
             },
             "line": 21,
@@ -256,7 +256,7 @@
           },
           {
             "result": {
-              "duration": 73496,
+              "duration": 103150,
               "status": "passed"
             },
             "line": 22,
@@ -292,6 +292,126 @@
     "elements": [
       {
         "line": 4,
+        "name": "Finalizado de un proyecto valido",
+        "description": "",
+        "id": "manejo-del-proyecto;finalizado-de-un-proyecto-valido",
+        "type": "scenario",
+        "keyword": "Escenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 774484,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "que mi proyecto tiene una iteracion y se finalizo la tarea \"true\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "true",
+                  "offset": 60
+                }
+              ],
+              "location": "ProyectoTest.que_mi_proyecto_tiene(boolean)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 80393,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "finalizo el proyecto",
+            "match": {
+              "location": "ProyectoTest.cuando_finalizo_el_proyecto()"
+            },
+            "keyword": "Cuando "
+          },
+          {
+            "result": {
+              "duration": 31955,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "el proyecto esta finalizado",
+            "match": {
+              "location": "ProyectoTest.el_proyecto_esta_finalizado()"
+            },
+            "keyword": "Entonces "
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "Finalizado de un proyecto invalido",
+        "description": "",
+        "id": "manejo-del-proyecto;finalizado-de-un-proyecto-invalido",
+        "type": "scenario",
+        "keyword": "Escenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 150485,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que mi proyecto tiene una iteracion y se finalizo la tarea \"false\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "false",
+                  "offset": 60
+                }
+              ],
+              "location": "ProyectoTest.que_mi_proyecto_tiene(boolean)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 58517,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "finalizo el proyecto",
+            "match": {
+              "location": "ProyectoTest.cuando_finalizo_el_proyecto()"
+            },
+            "keyword": "Cuando "
+          },
+          {
+            "result": {
+              "duration": 26674,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "el proyecto no esta finalizado",
+            "match": {
+              "location": "ProyectoTest.el_proyecto_no_esta_finalizado()"
+            },
+            "keyword": "Entonces "
+          }
+        ]
+      }
+    ],
+    "name": "Manejo del proyecto",
+    "description": "",
+    "id": "manejo-del-proyecto",
+    "keyword": "Característica",
+    "uri": "proyectos.feature"
+  },
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# language: es"
+      }
+    ],
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
         "name": "Agregado de tareas a una iteracion valida",
         "description": "",
         "id": "manejo-de-tareas;agregado-de-tareas-a-una-iteracion-valida",
@@ -300,7 +420,7 @@
         "steps": [
           {
             "result": {
-              "duration": 497512,
+              "duration": 1021954,
               "status": "passed"
             },
             "line": 5,
@@ -326,7 +446,7 @@
           },
           {
             "result": {
-              "duration": 116775,
+              "duration": 127147,
               "status": "passed"
             },
             "line": 6,
@@ -344,7 +464,7 @@
           },
           {
             "result": {
-              "duration": 199599,
+              "duration": 179565,
               "status": "passed"
             },
             "line": 7,
@@ -376,7 +496,7 @@
         "steps": [
           {
             "result": {
-              "duration": 358179,
+              "duration": 232249,
               "status": "passed"
             },
             "line": 10,
@@ -402,7 +522,7 @@
           },
           {
             "result": {
-              "duration": 133050,
+              "duration": 126746,
               "status": "passed"
             },
             "line": 11,
@@ -420,7 +540,7 @@
           },
           {
             "result": {
-              "duration": 133534,
+              "duration": 138755,
               "status": "passed"
             },
             "line": 12,
@@ -452,7 +572,7 @@
         "steps": [
           {
             "result": {
-              "duration": 962641,
+              "duration": 596397,
               "status": "passed"
             },
             "line": 16,
@@ -474,7 +594,7 @@
           },
           {
             "result": {
-              "duration": 136901,
+              "duration": 94873,
               "status": "passed"
             },
             "line": 17,
@@ -496,7 +616,7 @@
           },
           {
             "result": {
-              "duration": 95394,
+              "duration": 74379,
               "status": "passed"
             },
             "line": 18,
@@ -524,7 +644,7 @@
         "steps": [
           {
             "result": {
-              "duration": 203174,
+              "duration": 148385,
               "status": "passed"
             },
             "line": 21,
@@ -546,7 +666,7 @@
           },
           {
             "result": {
-              "duration": 160699,
+              "duration": 108029,
               "status": "passed"
             },
             "line": 22,
@@ -568,7 +688,7 @@
           },
           {
             "result": {
-              "duration": 81663,
+              "duration": 60276,
               "status": "passed"
             },
             "line": 23,
