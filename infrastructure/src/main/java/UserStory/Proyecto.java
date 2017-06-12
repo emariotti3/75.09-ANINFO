@@ -253,12 +253,12 @@ public class Proyecto {
 
     public Map<String,Tarea> obtenerTareasCompletadas (Usuario usuario, int it){
 
-        if (usuario.puestoActual() == "Gerente")
-            throw new UsuarioIncorrectoException();
-
         Integer numFase;
         Fase fase;
         Iteracion iteracion;
+
+        if (usuario.puestoActual() != "Gerente")
+            throw new UsuarioIncorrectoException();
 
         if (!correspondenciaItFase.containsKey(it))
             throw new IteracionInexistenteException();

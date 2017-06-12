@@ -68,15 +68,16 @@ public class UsuarioTest {
     }
 
     @Entonces("^obtengo un listado con \"(.*?)\" tareas$")
-    public void mi_proyecto_tiene(Integer it) throws Throwable {
+    public void obtengo_listado(Integer it) throws Throwable {
 
-        Integer size;
-
-        if (tareas == null)
-            size = 0;
-        else
-            size = tareas.size();
+        Integer size = tareas.size();
 
         assertEquals(size, it);
+    }
+
+    @Entonces("^obtengo un listado null$")
+    public void obtengo_listado_null() throws Throwable {
+
+        assertEquals(tareas, null);
     }
 }

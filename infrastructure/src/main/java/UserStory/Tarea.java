@@ -45,9 +45,9 @@ public class Tarea {
 
         if (!this.desarrolladores.contains(usuario))
             throw new UsuarioIncorrectoException();
-
-        if (activo)
-            finalizado = true;
+        else
+            if (activo)
+                finalizado = true;
     }
 
     public void comenzar(){

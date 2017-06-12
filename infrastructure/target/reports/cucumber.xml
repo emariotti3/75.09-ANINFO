@@ -1,96 +1,87 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="14" time="0.151463">
-<testcase classname="Manejo de iteraciones" name="Agregado de una iteracion" time="0.144333">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="14" time="0.138418">
+<testcase classname="Manejo de iteraciones" name="Agregado de una iteracion" time="0.131779">
 <system-out><![CDATA[Dado que mi proyecto tiene "5" iteraciones y la numero "3" esta activa......passed
 Cuando agrego una iteracion.................................................passed
 Entonces mi proyecto tiene "6" iteraciones..................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manejo de iteraciones" name="Finalizacion de una iteracion valida" time="0.000426">
+<testcase classname="Manejo de iteraciones" name="Finalizacion de una iteracion valida" time="0.000354">
 <system-out><![CDATA[Dado que mi proyecto tiene "5" iteraciones y la numero "3" esta activa......passed
 Cuando finalizo la iteracion "3"............................................passed
 Entonces la iteracion "3" esta finalizada...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manejo de iteraciones" name="Finalizacion de una iteracion valida con tarea incompleta" time="0.000406">
+<testcase classname="Manejo de iteraciones" name="Finalizacion de una iteracion valida con tarea incompleta" time="0.000331">
 <system-out><![CDATA[Dado que mi proyecto tiene "5" iteraciones y la numero "3" esta activa......passed
 Cuando finalizo la iteracion "3" sin finalizar todas las tareas.............passed
 Entonces la iteracion "3" esta activa.......................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manejo de iteraciones" name="Finalizacion de una iteracion invalida" time="0.000492">
+<testcase classname="Manejo de iteraciones" name="Finalizacion de una iteracion invalida" time="0.000508">
 <system-out><![CDATA[Dado que mi proyecto tiene "5" iteraciones y la numero "3" esta activa......passed
 Cuando finalizo la iteracion "4"............................................passed
 Entonces la iteracion "4" no esta activa....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manejo del proyecto" name="Finalizado de un proyecto valido" time="0.001052">
+<testcase classname="Manejo del proyecto" name="Finalizado de un proyecto valido" time="0.000856">
 <system-out><![CDATA[Dado que mi proyecto tiene una iteracion y se finalizo la tarea "true"......passed
 Cuando finalizo el proyecto.................................................passed
 Entonces el proyecto esta finalizado........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manejo del proyecto" name="Finalizado de un proyecto invalido" time="0.000317">
+<testcase classname="Manejo del proyecto" name="Finalizado de un proyecto invalido" time="0.00045">
 <system-out><![CDATA[Dado que mi proyecto tiene una iteracion y se finalizo la tarea "false".....passed
 Cuando finalizo el proyecto.................................................passed
 Entonces el proyecto no esta finalizado.....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manejo de tareas" name="Agregado de tareas a una iteracion valida" time="0.000661">
+<testcase classname="Manejo de tareas" name="Agregado de tareas a una iteracion valida" time="0.000674">
 <system-out><![CDATA[Dado que mi proyecto tiene "2" iteraciones,la iteracion "1" es la activa y tiene "1" tarea.passed
 Cuando agrego una tarea a la iteracion "1"..................................passed
 Entonces la iteracion "1" ahora tiene "2" tareas............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manejo de tareas" name="Agregado de tareas a una iteracion invalida" time="0.000576">
+<testcase classname="Manejo de tareas" name="Agregado de tareas a una iteracion invalida" time="0.000848">
 <system-out><![CDATA[Dado que mi proyecto tiene "2" iteraciones,la iteracion "0" es la activa y tiene "1" tarea.passed
 Cuando agrego una tarea a la iteracion "0"..................................passed
 Entonces la iteracion "0" sigue teniendo "1" tareas.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manejo de tareas" name="Finalizacion de una tarea por usuario que trabaja en ella" time="0.000384">
+<testcase classname="Manejo de tareas" name="Finalizacion de una tarea por usuario que trabaja en ella" time="0.000694">
 <system-out><![CDATA[Dado que el que usuario "1" posee la tarea "xxxx"...........................passed
 Cuando el usuario "1" finaliza la tarea "xxxx"..............................passed
 Entonces la tarea "xxxx" esta finalizada....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manejo de tareas" name="Finalizacion de una tarea por usuario que no trabaja en ella" time="0.00033">
+<testcase classname="Manejo de tareas" name="Finalizacion de una tarea por usuario que no trabaja en ella" time="0.00038">
 <system-out><![CDATA[Dado que el que usuario "1" posee la tarea "xxxx"...........................passed
 Cuando el usuario "2" finaliza la tarea "xxxx"..............................passed
 Entonces la tarea "xxxx" no esta finalizada.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manejo de tareas" name="Iniciar una tarea en un proyecto no inicializado" time="0.000378">
+<testcase classname="Manejo de tareas" name="Iniciar una tarea en un proyecto no inicializado" time="0.000299">
 <system-out><![CDATA[Dado que mi proyecto no inicializado tiene la tarea "xxxx"..................passed
 Cuando el usuario "1" inicializa la tarea "xxxx"............................passed
 Entonces la tarea "xxxx" no esta activada...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manipulacion de la aplicacion a traves de distintos usuarios" name="Un gerente pide la cantidad de tares en determinado proyecto" time="0.000638">
+<testcase classname="Manipulacion de la aplicacion a traves de distintos usuarios" name="Un gerente pide la cantidad de tareas en determinado proyecto" time="0.000609">
 <system-out><![CDATA[Dado que mi proyecto tiene una iteracion con "5" tareas y las primeras "3" terminadas.passed
 Cuando el usuario "0" pide las tareas de ese proyecto.......................passed
 Entonces obtengo un listado con "5" tareas..................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manipulacion de la aplicacion a traves de distintos usuarios" name="Un gerente pide la cantidad de tares en determinado proyecto" time="0.001015">
-<failure message="java.lang.AssertionError: expected:&lt;0&gt; but was:&lt;3&gt;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#10;&#9;at org.junit.Assert.failNotEquals(Assert.java:743)&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:118)&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#10;&#9;at UserStory.UsuarioTest.mi_proyecto_tiene(UsuarioTest.java:80)&#10;&#9;at ✽.Entonces obtengo un listado con &quot;3&quot; tareas(usuario.feature:14)&#10;"><![CDATA[Dado que mi proyecto tiene una iteracion con "5" tareas y las primeras "3" terminadas.passed
+<testcase classname="Manipulacion de la aplicacion a traves de distintos usuarios" name="Un gerente pide la cantidad de tareas terminadas en determinado proyecto" time="0.000359">
+<system-out><![CDATA[Dado que mi proyecto tiene una iteracion con "5" tareas y las primeras "3" terminadas.passed
 Cuando el usuario "0" pide las tareas terminadas de ese proyecto............passed
-Entonces obtengo un listado con "3" tareas..................................failed
-
-StackTrace:
-java.lang.AssertionError: expected:<0> but was:<3>
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:743)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at UserStory.UsuarioTest.mi_proyecto_tiene(UsuarioTest.java:80)
-	at ✽.Entonces obtengo un listado con "3" tareas(usuario.feature:14)
-]]></failure>
+Entonces obtengo un listado con "3" tareas..................................passed
+]]></system-out>
 </testcase>
-<testcase classname="Manipulacion de la aplicacion a traves de distintos usuarios" name="Un usuario fuera del proyecto pide la cantidad de tares en determinado proyecto" time="0.000455">
+<testcase classname="Manipulacion de la aplicacion a traves de distintos usuarios" name="Un usuario fuera del proyecto pide la cantidad de tares en determinado proyecto" time="0.000277">
 <system-out><![CDATA[Dado que mi proyecto tiene una iteracion con "5" tareas y las primeras "3" terminadas.passed
 Cuando el usuario "2" pide las tareas de ese proyecto.......................passed
-Entonces obtengo un listado con "0" tareas..................................passed
+Entonces obtengo un listado null............................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -41,9 +41,13 @@ public class Iteracion {
     public Map<String,Tarea> obtenerTareasFinalizadas() {
 
         Map<String,Tarea> aux = new HashMap<String,Tarea>();
-        for (Map.Entry<String,Tarea> tarea: tareas.entrySet()){
-            if (tarea.getValue().estaTerminada())
-                aux.put(tarea.getKey(),tarea.getValue());
+        String nombreTarea;
+        Tarea tarea;
+        for (Map.Entry<String,Tarea> auxtarea: tareas.entrySet()){
+            nombreTarea = auxtarea.getKey();
+            tarea = auxtarea.getValue();
+            if (tarea.estaTerminada())
+                aux.put(nombreTarea,tarea);
         }
 
         return aux;
