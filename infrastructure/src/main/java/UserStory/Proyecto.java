@@ -48,6 +48,10 @@ public class Proyecto {
         return this.estaTerminado;
     }
 
+    public boolean estaActivo() {
+        return this.activo;
+    }
+
     public void finalizar(){
         boolean fasesTerminadas = true;
 
@@ -98,10 +102,12 @@ public class Proyecto {
     }
 
     public void activarFase(Integer f){
-        try{
-            fases.get(f).activarFase();
-        } catch(FaseException ex){}
-
+        if (this.activo)
+            try{
+                fases.get(f).activarFase();
+            } catch(FaseException ex){}
+        else
+            throw new ProyectoNoInicializadoException();
     }
 
     public void finalizarFase(Integer f){
@@ -125,22 +131,25 @@ public class Proyecto {
         this.cantIteraciones++;
     }
 
-    public void activarIteracion(Integer it){
+    public void activarIteracion(Integer it) {
         Integer numFase;
         Fase fase;
 
-        if(!correspondenciaItFase.containsKey(it))
-            throw new IteracionInexistenteException();
+        if(this.activo){
+            if (!correspondenciaItFase.containsKey(it))
+                throw new IteracionInexistenteException();
 
-        numFase = correspondenciaItFase.get(it);
-        fase = fases.get(numFase);
+            numFase = correspondenciaItFase.get(it);
+            fase = fases.get(numFase);
 
-        try{
-            fase.activarIteracion(it);
-        } catch(IteracionNoInicializableException ex){
+            try {
+                fase.activarIteracion(it);
+            } catch (IteracionNoInicializableException ex) {
 
+            }
+        }else{
+            throw new ProyectoNoInicializadoException();
         }
-
     }
 
     public void finalizarIteracion(Integer it){
@@ -197,6 +206,7 @@ public class Proyecto {
             throw new IteracionFinalizadaException();
 
         t = new Tarea(id,obj,it);
+        t.agregarProyecto(this);
         correspondenciaTareaIt.put(id,it);
         iteracion.agregarTarea(t);
     }

@@ -28,7 +28,7 @@ public class TareaTest {
         proyecto = new Proyecto("Hola","PSA",1,fecha);
         gerente = new Usuario("Alan","123456","Gerente");
         usuarios = new ArrayList<Usuario>();
-        usuarios.add(new Usuario("Rinaldi","123456","Desarrollador"));
+        usuarios.add(new Usuario("user1","123456","Desarrollador"));
 
         user1 = usuarios.get(0);
 
@@ -93,12 +93,14 @@ public class TareaTest {
         gerente = new Usuario("Alan","123456","Gerente");
         usuarios = new ArrayList<Usuario>();
 
-        usuarios.add(new Usuario("Rinaldi","123456","Desarrollador"));
-        usuarios.add(new Usuario("xxxx","123456","Desarrollador"));
+        usuarios.add(new Usuario("user1","123456","Desarrollador"));
+        usuarios.add(new Usuario("user2","123456","Desarrollador"));
 
         user1 = usuarios.get(u-1);
 
         proyecto.agregarLider(user1);
+
+        proyecto.comenzar();
 
         user1.agregarProyecto(proyecto);
         user1.serLiderProyecto(proyecto.obtenerNombreProyecto());
@@ -142,5 +144,47 @@ public class TareaTest {
         }catch(TareaInexistenteException ex){}
     }
 
+    @Dado("^que mi proyecto no inicializado tiene la tarea \"(.*?)\"$")
+    public void que_mi_proyecto_no_inicializado(String t) throws Throwable {
+
+        Usuario user1;
+
+        proyecto = new Proyecto("Hola","PSA",1,fecha);
+        gerente = new Usuario("Alan","123456","Gerente");
+        usuarios = new ArrayList<Usuario>();
+        usuarios.add(new Usuario("user1","123456","Desarrollador"));
+        usuarios.add(new Usuario("user2","123456","Desarrollador"));
+
+        user1 = usuarios.get(0);
+
+        proyecto.agregarLider(user1);
+
+        user1.agregarProyecto(proyecto);
+        user1.serLiderProyecto(proyecto.obtenerNombreProyecto());
+
+        proyecto.agregarFase();
+        proyecto.agregarIteracion(0);
+
+        user1.crearTarea(proyecto,0,t,"tarea");
+    }
+
+    @Cuando("^el usuario \"(.*?)\" inicializa la tarea \"(.*?)\"$")
+    public void el_usuario_inicializa(Integer u,String t) throws Throwable {
+        Usuario user = usuarios.get(u-1);
+        try{
+            user.activarTarea(t);
+        } catch(ProyectoException ex){
+
+        }
+    }
+
+    @Entonces("^la tarea \"(.*?)\" no esta activada$")
+    public void la_tarea_no_esta_activada(String t) throws Throwable {
+        Tarea tarea;
+        try {
+            tarea = proyecto.obtenerTarea(t);
+            assertFalse(tarea.estaActiva());
+        }catch(TareaInexistenteException ex){}
+    }
 
 }

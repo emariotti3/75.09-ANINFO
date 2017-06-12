@@ -1,9 +1,7 @@
 package UserStory;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class Tarea {
 
@@ -13,7 +11,7 @@ public class Tarea {
     private String objetivo;
     private boolean activo;
     private boolean finalizado;
-    private Set<String> proyectos;
+    private Proyecto proyecto;
 
     public Tarea(String id, String objetivo, int iteracion){
         this.id = id;
@@ -22,7 +20,6 @@ public class Tarea {
         this.activo = false;
         this.finalizado = false;
         this.desarrolladores = new ArrayList<Usuario>();
-        proyectos = new HashSet<String>();
     }
 
     public String idTarea() {
@@ -54,17 +51,24 @@ public class Tarea {
     }
 
     public void comenzar(){
-        activo = true;
+        if(this.proyecto.estaActivo() && !this.proyecto.estaFinalizado())
+            activo = true;
+        else
+            throw new ProyectoException();
     }
 
-    public void agregarProyecto(String id){
-        proyectos.add(id);
+    public void agregarProyecto(Proyecto p){
+        this.proyecto = p;
     }
 
-    public Set<String> obtenerProyectos() { return this.proyectos; }
+    public Proyecto obtenerProyecto() { return this.proyecto; }
 
     public boolean estaTerminada(){
         return this.finalizado;
+    }
+
+    public boolean estaActiva(){
+        return this.activo;
     }
 
 }

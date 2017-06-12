@@ -21,3 +21,9 @@ Característica: Manejo de tareas
     Dado que el que usuario "1" posee la tarea "xxxx"
     Cuando el usuario "2" finaliza la tarea "xxxx"
     Entonces la tarea "xxxx" no esta finalizada
+
+  Escenario: Iniciar una tarea en un proyecto no inicializado
+    Dado que mi proyecto no inicializado tiene la tarea "xxxx"
+    Cuando el usuario "1" inicializa la tarea "xxxx"
+    Entonces la tarea "xxxx" no esta activada
+

@@ -36,6 +36,8 @@ public class IteracionTest {
         user1.agregarProyecto(proyecto);
         user1.serLiderProyecto(proyecto.obtenerNombreProyecto());
 
+        proyecto.comenzar();
+
         proyecto.agregarFase();
         proyecto.activarFase(0);
 
