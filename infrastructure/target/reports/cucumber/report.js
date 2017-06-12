@@ -49,14 +49,14 @@ formatter.match({
   "location": "IteracionTest.que_mi_proyecto_tiene_iteraciones(int,int)"
 });
 formatter.result({
-  "duration": 124423871,
+  "duration": 144217514,
   "status": "passed"
 });
 formatter.match({
   "location": "IteracionTest.cuando_agrego_una_iteracion()"
 });
 formatter.result({
-  "duration": 31825,
+  "duration": 26339,
   "status": "passed"
 });
 formatter.match({
@@ -69,7 +69,7 @@ formatter.match({
   "location": "IteracionTest.mi_proyecto_tiene(Integer)"
 });
 formatter.result({
-  "duration": 81714,
+  "duration": 88942,
   "status": "passed"
 });
 formatter.scenario({
@@ -109,7 +109,7 @@ formatter.match({
   "location": "IteracionTest.que_mi_proyecto_tiene_iteraciones(int,int)"
 });
 formatter.result({
-  "duration": 211753,
+  "duration": 262840,
   "status": "passed"
 });
 formatter.match({
@@ -122,7 +122,7 @@ formatter.match({
   "location": "IteracionTest.cuando_finalizo_la_iteracion(Integer)"
 });
 formatter.result({
-  "duration": 103945,
+  "duration": 79759,
   "status": "passed"
 });
 formatter.match({
@@ -135,7 +135,7 @@ formatter.match({
   "location": "IteracionTest.la_iteracion_esta_finalizada(Integer)"
 });
 formatter.result({
-  "duration": 115934,
+  "duration": 83035,
   "status": "passed"
 });
 formatter.scenario({
@@ -175,7 +175,7 @@ formatter.match({
   "location": "IteracionTest.que_mi_proyecto_tiene_iteraciones(int,int)"
 });
 formatter.result({
-  "duration": 274024,
+  "duration": 207127,
   "status": "passed"
 });
 formatter.match({
@@ -188,7 +188,7 @@ formatter.match({
   "location": "IteracionTest.cuando_finalizo_la_iteracion_sin_finalizar_tareas(Integer)"
 });
 formatter.result({
-  "duration": 100002,
+  "duration": 76153,
   "status": "passed"
 });
 formatter.match({
@@ -201,7 +201,7 @@ formatter.match({
   "location": "IteracionTest.la_iteracion_esta_activa(Integer)"
 });
 formatter.result({
-  "duration": 112483,
+  "duration": 123078,
   "status": "passed"
 });
 formatter.scenario({
@@ -241,7 +241,7 @@ formatter.match({
   "location": "IteracionTest.que_mi_proyecto_tiene_iteraciones(int,int)"
 });
 formatter.result({
-  "duration": 310715,
+  "duration": 248932,
   "status": "passed"
 });
 formatter.match({
@@ -254,7 +254,7 @@ formatter.match({
   "location": "IteracionTest.cuando_finalizo_la_iteracion(Integer)"
 });
 formatter.result({
-  "duration": 138240,
+  "duration": 138316,
   "status": "passed"
 });
 formatter.match({
@@ -267,7 +267,7 @@ formatter.match({
   "location": "IteracionTest.la_iteracion_no_esta_activa(Integer)"
 });
 formatter.result({
-  "duration": 99402,
+  "duration": 104778,
   "status": "passed"
 });
 formatter.uri("proyectos.feature");
@@ -317,21 +317,21 @@ formatter.match({
   "location": "ProyectoTest.que_mi_proyecto_tiene(boolean)"
 });
 formatter.result({
-  "duration": 679043,
+  "duration": 919947,
   "status": "passed"
 });
 formatter.match({
   "location": "ProyectoTest.cuando_finalizo_el_proyecto()"
 });
 formatter.result({
-  "duration": 95102,
+  "duration": 93780,
   "status": "passed"
 });
 formatter.match({
   "location": "ProyectoTest.el_proyecto_esta_finalizado()"
 });
 formatter.result({
-  "duration": 35221,
+  "duration": 38422,
   "status": "passed"
 });
 formatter.scenario({
@@ -367,21 +367,21 @@ formatter.match({
   "location": "ProyectoTest.que_mi_proyecto_tiene(boolean)"
 });
 formatter.result({
-  "duration": 133654,
+  "duration": 167457,
   "status": "passed"
 });
 formatter.match({
   "location": "ProyectoTest.cuando_finalizo_el_proyecto()"
 });
 formatter.result({
-  "duration": 293228,
+  "duration": 97695,
   "status": "passed"
 });
 formatter.match({
   "location": "ProyectoTest.el_proyecto_no_esta_finalizado()"
 });
 formatter.result({
-  "duration": 47081,
+  "duration": 51423,
   "status": "passed"
 });
 formatter.uri("tareas.feature");
@@ -439,7 +439,7 @@ formatter.match({
   "location": "TareaTest.que_mi_proyecto(int,int,int)"
 });
 formatter.result({
-  "duration": 305229,
+  "duration": 403967,
   "status": "passed"
 });
 formatter.match({
@@ -452,7 +452,7 @@ formatter.match({
   "location": "TareaTest.cuando_agrego_una_tarea(Integer)"
 });
 formatter.result({
-  "duration": 105647,
+  "duration": 130691,
   "status": "passed"
 });
 formatter.match({
@@ -469,7 +469,7 @@ formatter.match({
   "location": "TareaTest.la_iteracion_tiene(Integer,Integer)"
 });
 formatter.result({
-  "duration": 161722,
+  "duration": 126652,
   "status": "passed"
 });
 formatter.scenario({
@@ -513,7 +513,7 @@ formatter.match({
   "location": "TareaTest.que_mi_proyecto(int,int,int)"
 });
 formatter.result({
-  "duration": 294705,
+  "duration": 281777,
   "status": "passed"
 });
 formatter.match({
@@ -526,7 +526,7 @@ formatter.match({
   "location": "TareaTest.cuando_agrego_una_tarea(Integer)"
 });
 formatter.result({
-  "duration": 120054,
+  "duration": 192430,
   "status": "passed"
 });
 formatter.match({
@@ -543,7 +543,7 @@ formatter.match({
   "location": "TareaTest.la_iteracion_sigue_teniendo(Integer,Integer)"
 });
 formatter.result({
-  "duration": 88835,
+  "duration": 102156,
   "status": "passed"
 });
 formatter.scenario({
@@ -583,7 +583,7 @@ formatter.match({
   "location": "TareaTest.que_el_usuario_posee_tarea(Integer,String)"
 });
 formatter.result({
-  "duration": 906003,
+  "duration": 234435,
   "status": "passed"
 });
 formatter.match({
@@ -600,7 +600,7 @@ formatter.match({
   "location": "TareaTest.cuando_agrego_una_tarea(Integer,String)"
 });
 formatter.result({
-  "duration": 110175,
+  "duration": 85970,
   "status": "passed"
 });
 formatter.match({
@@ -613,7 +613,7 @@ formatter.match({
   "location": "TareaTest.la_tarea_esta_finalizada(String)"
 });
 formatter.result({
-  "duration": 87977,
+  "duration": 63984,
   "status": "passed"
 });
 formatter.scenario({
@@ -653,7 +653,7 @@ formatter.match({
   "location": "TareaTest.que_el_usuario_posee_tarea(Integer,String)"
 });
 formatter.result({
-  "duration": 145279,
+  "duration": 163862,
   "status": "passed"
 });
 formatter.match({
@@ -670,7 +670,7 @@ formatter.match({
   "location": "TareaTest.cuando_agrego_una_tarea(Integer,String)"
 });
 formatter.result({
-  "duration": 110971,
+  "duration": 104593,
   "status": "passed"
 });
 formatter.match({
@@ -683,7 +683,7 @@ formatter.match({
   "location": "TareaTest.la_tarea_no_esta_finalizada(String)"
 });
 formatter.result({
-  "duration": 54470,
+  "duration": 61106,
   "status": "passed"
 });
 formatter.scenario({
@@ -719,7 +719,7 @@ formatter.match({
   "location": "TareaTest.que_mi_proyecto_no_inicializado(String)"
 });
 formatter.result({
-  "duration": 100787,
+  "duration": 131296,
   "status": "passed"
 });
 formatter.match({
@@ -736,7 +736,7 @@ formatter.match({
   "location": "TareaTest.el_usuario_inicializa(Integer,String)"
 });
 formatter.result({
-  "duration": 108537,
+  "duration": 155065,
   "status": "passed"
 });
 formatter.match({
@@ -749,7 +749,226 @@ formatter.match({
   "location": "TareaTest.la_tarea_no_esta_activada(String)"
 });
 formatter.result({
-  "duration": 73656,
+  "duration": 92114,
+  "status": "passed"
+});
+formatter.uri("usuario.feature");
+formatter.feature({
+  "comments": [
+    {
+      "line": 1,
+      "value": "# language: es"
+    }
+  ],
+  "line": 2,
+  "name": "Manipulacion de la aplicacion a traves de distintos usuarios",
+  "description": "",
+  "id": "manipulacion-de-la-aplicacion-a-traves-de-distintos-usuarios",
+  "keyword": "Característica"
+});
+formatter.scenario({
+  "comments": [
+    {
+      "line": 4,
+      "value": "#Usuario 0 es el gerente."
+    }
+  ],
+  "line": 6,
+  "name": "Un gerente pide la cantidad de tares en determinado proyecto",
+  "description": "",
+  "id": "manipulacion-de-la-aplicacion-a-traves-de-distintos-usuarios;un-gerente-pide-la-cantidad-de-tares-en-determinado-proyecto",
+  "type": "scenario",
+  "keyword": "Escenario"
+});
+formatter.step({
+  "line": 7,
+  "name": "que mi proyecto tiene una iteracion con \"5\" tareas y las primeras \"3\" terminadas",
+  "keyword": "Dado "
+});
+formatter.step({
+  "line": 8,
+  "name": "el usuario \"0\" pide las tareas de ese proyecto",
+  "keyword": "Cuando "
+});
+formatter.step({
+  "line": 9,
+  "name": "obtengo un listado con \"5\" tareas",
+  "keyword": "Entonces "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "5",
+      "offset": 41
+    },
+    {
+      "val": "3",
+      "offset": 67
+    }
+  ],
+  "location": "UsuarioTest.que_mi_proyecto_tiene_tareas(int,int)"
+});
+formatter.result({
+  "duration": 412786,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "0",
+      "offset": 12
+    }
+  ],
+  "location": "UsuarioTest.cuando_usuario_pide_tareas(int)"
+});
+formatter.result({
+  "duration": 98961,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "5",
+      "offset": 24
+    }
+  ],
+  "location": "UsuarioTest.mi_proyecto_tiene(Integer)"
+});
+formatter.result({
+  "duration": 126260,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 11,
+  "name": "Un gerente pide la cantidad de tares en determinado proyecto",
+  "description": "",
+  "id": "manipulacion-de-la-aplicacion-a-traves-de-distintos-usuarios;un-gerente-pide-la-cantidad-de-tares-en-determinado-proyecto",
+  "type": "scenario",
+  "keyword": "Escenario"
+});
+formatter.step({
+  "line": 12,
+  "name": "que mi proyecto tiene una iteracion con \"5\" tareas y las primeras \"3\" terminadas",
+  "keyword": "Dado "
+});
+formatter.step({
+  "line": 13,
+  "name": "el usuario \"0\" pide las tareas terminadas de ese proyecto",
+  "keyword": "Cuando "
+});
+formatter.step({
+  "line": 14,
+  "name": "obtengo un listado con \"3\" tareas",
+  "keyword": "Entonces "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "5",
+      "offset": 41
+    },
+    {
+      "val": "3",
+      "offset": 67
+    }
+  ],
+  "location": "UsuarioTest.que_mi_proyecto_tiene_tareas(int,int)"
+});
+formatter.result({
+  "duration": 223769,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "0",
+      "offset": 12
+    }
+  ],
+  "location": "UsuarioTest.cuando_usuario_pide_tareas_terminadas(int)"
+});
+formatter.result({
+  "duration": 143921,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 24
+    }
+  ],
+  "location": "UsuarioTest.mi_proyecto_tiene(Integer)"
+});
+formatter.result({
+  "duration": 647633,
+  "error_message": "java.lang.AssertionError: expected:\u003c0\u003e but was:\u003c3\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat UserStory.UsuarioTest.mi_proyecto_tiene(UsuarioTest.java:80)\n\tat ✽.Entonces obtengo un listado con \"3\" tareas(usuario.feature:14)\n",
+  "status": "failed"
+});
+formatter.scenario({
+  "line": 17,
+  "name": "Un usuario fuera del proyecto pide la cantidad de tares en determinado proyecto",
+  "description": "",
+  "id": "manipulacion-de-la-aplicacion-a-traves-de-distintos-usuarios;un-usuario-fuera-del-proyecto-pide-la-cantidad-de-tares-en-determinado-proyecto",
+  "type": "scenario",
+  "keyword": "Escenario"
+});
+formatter.step({
+  "line": 18,
+  "name": "que mi proyecto tiene una iteracion con \"5\" tareas y las primeras \"3\" terminadas",
+  "keyword": "Dado "
+});
+formatter.step({
+  "line": 19,
+  "name": "el usuario \"2\" pide las tareas de ese proyecto",
+  "keyword": "Cuando "
+});
+formatter.step({
+  "line": 20,
+  "name": "obtengo un listado con \"0\" tareas",
+  "keyword": "Entonces "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "5",
+      "offset": 41
+    },
+    {
+      "val": "3",
+      "offset": 67
+    }
+  ],
+  "location": "UsuarioTest.que_mi_proyecto_tiene_tareas(int,int)"
+});
+formatter.result({
+  "duration": 267965,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 12
+    }
+  ],
+  "location": "UsuarioTest.cuando_usuario_pide_tareas(int)"
+});
+formatter.result({
+  "duration": 113186,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "0",
+      "offset": 24
+    }
+  ],
+  "location": "UsuarioTest.mi_proyecto_tiene(Integer)"
+});
+formatter.result({
+  "duration": 73485,
   "status": "passed"
 });
 });

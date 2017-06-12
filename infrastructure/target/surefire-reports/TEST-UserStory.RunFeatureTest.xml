@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UserStory.RunFeatureTest" time="0.01" tests="44" errors="0" skipped="0" failures="0">
+<testsuite name="UserStory.RunFeatureTest" time="0.019" tests="56" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
@@ -59,7 +59,7 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="Dado que mi proyecto tiene &quot;5&quot; iteraciones y la numero &quot;3&quot; esta activa" classname="Escenario: Agregado de una iteracion" time="0.001"/>
+  <testcase name="Dado que mi proyecto tiene &quot;5&quot; iteraciones y la numero &quot;3&quot; esta activa" classname="Escenario: Agregado de una iteracion" time="0"/>
   <testcase name="Cuando agrego una iteracion" classname="Escenario: Agregado de una iteracion" time="0"/>
   <testcase name="Entonces mi proyecto tiene &quot;6&quot; iteraciones" classname="Escenario: Agregado de una iteracion" time="0"/>
   <testcase name="Escenario: Agregado de una iteracion" classname="Escenario: Agregado de una iteracion" time="0"/>
@@ -78,7 +78,7 @@
   <testcase name="Dado que mi proyecto tiene una iteracion y se finalizo la tarea &quot;true&quot;" classname="Escenario: Finalizado de un proyecto valido" time="0"/>
   <testcase name="Cuando finalizo el proyecto" classname="Escenario: Finalizado de un proyecto valido" time="0"/>
   <testcase name="Entonces el proyecto esta finalizado" classname="Escenario: Finalizado de un proyecto valido" time="0"/>
-  <testcase name="Escenario: Finalizado de un proyecto valido" classname="Escenario: Finalizado de un proyecto valido" time="0"/>
+  <testcase name="Escenario: Finalizado de un proyecto valido" classname="Escenario: Finalizado de un proyecto valido" time="0.001"/>
   <testcase name="Dado que mi proyecto tiene una iteracion y se finalizo la tarea &quot;false&quot;" classname="Escenario: Finalizado de un proyecto invalido" time="0"/>
   <testcase name="Cuando finalizo el proyecto" classname="Escenario: Finalizado de un proyecto invalido" time="0"/>
   <testcase name="Entonces el proyecto no esta finalizado" classname="Escenario: Finalizado de un proyecto invalido" time="0"/>
@@ -88,19 +88,49 @@
   <testcase name="Entonces la iteracion &quot;1&quot; ahora tiene &quot;2&quot; tareas" classname="Escenario: Agregado de tareas a una iteracion valida" time="0"/>
   <testcase name="Escenario: Agregado de tareas a una iteracion valida" classname="Escenario: Agregado de tareas a una iteracion valida" time="0"/>
   <testcase name="Dado que mi proyecto tiene &quot;2&quot; iteraciones,la iteracion &quot;0&quot; es la activa y tiene &quot;1&quot; tarea" classname="Escenario: Agregado de tareas a una iteracion invalida" time="0"/>
-  <testcase name="Cuando agrego una tarea a la iteracion &quot;0&quot;" classname="Escenario: Agregado de tareas a una iteracion invalida" time="0.001"/>
-  <testcase name="Entonces la iteracion &quot;0&quot; sigue teniendo &quot;1&quot; tareas" classname="Escenario: Agregado de tareas a una iteracion invalida" time="0.001"/>
-  <testcase name="Escenario: Agregado de tareas a una iteracion invalida" classname="Escenario: Agregado de tareas a una iteracion invalida" time="0.001"/>
-  <testcase name="Dado que el que usuario &quot;1&quot; posee la tarea &quot;xxxx&quot;" classname="Escenario: Finalizacion de una tarea por usuario que trabaja en ella" time="0.001"/>
+  <testcase name="Cuando agrego una tarea a la iteracion &quot;0&quot;" classname="Escenario: Agregado de tareas a una iteracion invalida" time="0"/>
+  <testcase name="Entonces la iteracion &quot;0&quot; sigue teniendo &quot;1&quot; tareas" classname="Escenario: Agregado de tareas a una iteracion invalida" time="0"/>
+  <testcase name="Escenario: Agregado de tareas a una iteracion invalida" classname="Escenario: Agregado de tareas a una iteracion invalida" time="0"/>
+  <testcase name="Dado que el que usuario &quot;1&quot; posee la tarea &quot;xxxx&quot;" classname="Escenario: Finalizacion de una tarea por usuario que trabaja en ella" time="0"/>
   <testcase name="Cuando el usuario &quot;1&quot; finaliza la tarea &quot;xxxx&quot;" classname="Escenario: Finalizacion de una tarea por usuario que trabaja en ella" time="0"/>
   <testcase name="Entonces la tarea &quot;xxxx&quot; esta finalizada" classname="Escenario: Finalizacion de una tarea por usuario que trabaja en ella" time="0"/>
-  <testcase name="Escenario: Finalizacion de una tarea por usuario que trabaja en ella" classname="Escenario: Finalizacion de una tarea por usuario que trabaja en ella" time="0.001"/>
+  <testcase name="Escenario: Finalizacion de una tarea por usuario que trabaja en ella" classname="Escenario: Finalizacion de una tarea por usuario que trabaja en ella" time="0"/>
   <testcase name="Dado que el que usuario &quot;1&quot; posee la tarea &quot;xxxx&quot;" classname="Escenario: Finalizacion de una tarea por usuario que no trabaja en ella" time="0"/>
-  <testcase name="Cuando el usuario &quot;2&quot; finaliza la tarea &quot;xxxx&quot;" classname="Escenario: Finalizacion de una tarea por usuario que no trabaja en ella" time="0.001"/>
+  <testcase name="Cuando el usuario &quot;2&quot; finaliza la tarea &quot;xxxx&quot;" classname="Escenario: Finalizacion de una tarea por usuario que no trabaja en ella" time="0"/>
   <testcase name="Entonces la tarea &quot;xxxx&quot; no esta finalizada" classname="Escenario: Finalizacion de una tarea por usuario que no trabaja en ella" time="0"/>
-  <testcase name="Escenario: Finalizacion de una tarea por usuario que no trabaja en ella" classname="Escenario: Finalizacion de una tarea por usuario que no trabaja en ella" time="0.001"/>
+  <testcase name="Escenario: Finalizacion de una tarea por usuario que no trabaja en ella" classname="Escenario: Finalizacion de una tarea por usuario que no trabaja en ella" time="0"/>
   <testcase name="Dado que mi proyecto no inicializado tiene la tarea &quot;xxxx&quot;" classname="Escenario: Iniciar una tarea en un proyecto no inicializado" time="0"/>
   <testcase name="Cuando el usuario &quot;1&quot; inicializa la tarea &quot;xxxx&quot;" classname="Escenario: Iniciar una tarea en un proyecto no inicializado" time="0"/>
   <testcase name="Entonces la tarea &quot;xxxx&quot; no esta activada" classname="Escenario: Iniciar una tarea en un proyecto no inicializado" time="0"/>
-  <testcase name="Escenario: Iniciar una tarea en un proyecto no inicializado" classname="Escenario: Iniciar una tarea en un proyecto no inicializado" time="0.001"/>
+  <testcase name="Escenario: Iniciar una tarea en un proyecto no inicializado" classname="Escenario: Iniciar una tarea en un proyecto no inicializado" time="0"/>
+  <testcase name="Dado que mi proyecto tiene una iteracion con &quot;5&quot; tareas y las primeras &quot;3&quot; terminadas" classname="Escenario: Un gerente pide la cantidad de tares en determinado proyecto" time="0"/>
+  <testcase name="Cuando el usuario &quot;0&quot; pide las tareas de ese proyecto" classname="Escenario: Un gerente pide la cantidad de tares en determinado proyecto" time="0"/>
+  <testcase name="Entonces obtengo un listado con &quot;5&quot; tareas" classname="Escenario: Un gerente pide la cantidad de tares en determinado proyecto" time="0"/>
+  <testcase name="Escenario: Un gerente pide la cantidad de tares en determinado proyecto" classname="Escenario: Un gerente pide la cantidad de tares en determinado proyecto" time="0"/>
+  <testcase name="Dado que mi proyecto tiene una iteracion con &quot;5&quot; tareas y las primeras &quot;3&quot; terminadas" classname="Escenario: Un gerente pide la cantidad de tares en determinado proyecto" time="0"/>
+  <testcase name="Cuando el usuario &quot;0&quot; pide las tareas terminadas de ese proyecto" classname="Escenario: Un gerente pide la cantidad de tares en determinado proyecto" time="0"/>
+  <testcase name="Entonces obtengo un listado con &quot;3&quot; tareas" classname="Escenario: Un gerente pide la cantidad de tares en determinado proyecto" time="0.006">
+    <failure message="expected:&lt;0&gt; but was:&lt;3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<0> but was:<3>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at UserStory.UsuarioTest.mi_proyecto_tiene(UsuarioTest.java:80)
+	at ✽.Entonces obtengo un listado con "3" tareas(usuario.feature:14)
+]]></failure>
+  </testcase>
+  <testcase name="Escenario: Un gerente pide la cantidad de tares en determinado proyecto" classname="Escenario: Un gerente pide la cantidad de tares en determinado proyecto" time="0.006">
+    <failure message="expected:&lt;0&gt; but was:&lt;3&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<0> but was:<3>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at UserStory.UsuarioTest.mi_proyecto_tiene(UsuarioTest.java:80)
+	at ✽.Entonces obtengo un listado con "3" tareas(usuario.feature:14)
+]]></failure>
+  </testcase>
+  <testcase name="Dado que mi proyecto tiene una iteracion con &quot;5&quot; tareas y las primeras &quot;3&quot; terminadas" classname="Escenario: Un usuario fuera del proyecto pide la cantidad de tares en determinado proyecto" time="0.005"/>
+  <testcase name="Cuando el usuario &quot;2&quot; pide las tareas de ese proyecto" classname="Escenario: Un usuario fuera del proyecto pide la cantidad de tares en determinado proyecto" time="0"/>
+  <testcase name="Entonces obtengo un listado con &quot;0&quot; tareas" classname="Escenario: Un usuario fuera del proyecto pide la cantidad de tares en determinado proyecto" time="0"/>
+  <testcase name="Escenario: Un usuario fuera del proyecto pide la cantidad de tares en determinado proyecto" classname="Escenario: Un usuario fuera del proyecto pide la cantidad de tares en determinado proyecto" time="0"/>
 </testsuite>

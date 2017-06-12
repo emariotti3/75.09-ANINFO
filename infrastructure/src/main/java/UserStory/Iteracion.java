@@ -40,10 +40,10 @@ public class Iteracion {
 
     public Map<String,Tarea> obtenerTareasFinalizadas() {
 
-        Map<String,Tarea> aux = tareas;
+        Map<String,Tarea> aux = new HashMap<String,Tarea>();
         for (Map.Entry<String,Tarea> tarea: tareas.entrySet()){
-            if (!tarea.getValue().estaTerminada())
-                aux.remove(tarea.getKey());
+            if (tarea.getValue().estaTerminada())
+                aux.put(tarea.getKey(),tarea.getValue());
         }
 
         return aux;

@@ -78,6 +78,14 @@ public class Usuario {
         }
     }
 
+    public Map<String,Tarea> obtenerTareasCompletadas(Proyecto proyecto, int iteracion){
+        try {
+            return proyecto.obtenerTareasCompletadas(this,iteracion);
+        } catch (UsuarioIncorrectoException ex) {
+            return null;
+        }
+    }
+
     public void activarTarea(String id){
         if(!tareas.containsKey(id))
             throw new TareaInexistenteException();
